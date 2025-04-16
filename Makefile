@@ -5,6 +5,7 @@ INSTALL_DIR=/usr/local/bin
 all: mysys
 
 mysys: src/SystemInfo.c
+	mkdir -p bin
 	$(CC) $(CFLAGS) -o bin/$@ $<
 
 install: all
