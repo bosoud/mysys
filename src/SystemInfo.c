@@ -43,7 +43,7 @@ void print_network_info() {
         char gateway[256];
         if (fgets(gateway, sizeof(gateway), fp) != NULL) {
             gateway[strcspn(gateway, "\n")] = 0; // Remove newline
-            printf("  \033[1;32mGateway:\033[0m %s\n", gateway);
+            printf("  \033[1;32m\n  * Gateway:\033[0m %s\n", gateway);
         }
         pclose(fp);
     }
